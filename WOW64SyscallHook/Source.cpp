@@ -54,7 +54,7 @@ void __declspec(naked) HookedNtWriteVirtualMemory()
 	{
 		mov BackupEax, eax
 
-		mov eax, [esp + 0x14] // numberOfBytesWritten
+		mov eax, [esp + 0x18] // numberOfBytesWritten
 		mov numberOfBytesWritten, eax
 
 		mov eax, [esp + 0x14] // numberOfBytesToWrite
