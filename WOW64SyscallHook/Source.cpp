@@ -5,13 +5,9 @@
 
 int* originalWOW64 = nullptr;
 
-__declspec(naked) int* GetWOW64Address()
+int* GetWOW64Address()
 {
-	__asm
-	{
-		mov eax, fs: [0xC0]
-		ret
-	}
+	return reinterpret_cast<int*>(__readfsdword(0xC0));
 }
 
 void WriteMemory(void* wow64Address, const void* buffer, const int size)
