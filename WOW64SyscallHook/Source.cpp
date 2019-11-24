@@ -41,7 +41,7 @@ void saveOriginalWOW64(const void* wow64Address)
 	}
 }
 
-DWORD BackupEax;
+
 HANDLE processHandle;
 PVOID baseAddress;
 PVOID buffer;
@@ -52,27 +52,27 @@ void __declspec(naked) HookedNtWriteVirtualMemory()
 {
 	__asm
 	{
-		mov BackupEax, eax
+		push eax
 
-		mov eax, [esp + 0x18] // numberOfBytesWritten
+		mov eax, [esp + 0x1C] // numberOfBytesWritten
 		mov numberOfBytesWritten, eax
 
-		mov eax, [esp + 0x14] // numberOfBytesToWrite
+		mov eax, [esp + 0x18] // numberOfBytesToWrite
 		mov numberOfBytesToWrite, eax
 
-		lea eax, [esp + 0x14] // pointer numberOfBytesToWrite
+		lea eax, [esp + 0x18] // pointer numberOfBytesToWrite
 		mov pNumberOfBytesToWrite, eax
 
-		mov eax, [esp + 0x10] // buffer
+		mov eax, [esp + 0x14] // buffer
 		mov buffer, eax
 
-		mov eax, [esp + 0x0C] // baseAddress
+		mov eax, [esp + 0x10] // baseAddress
 		mov baseAddress, eax
 
-		mov eax, [esp + 0x08] // processHandle
+		mov eax, [esp + 0x0C] // processHandle
 		mov processHandle, eax
 
-		mov eax, BackupEax
+		pop eax
 
 		pushad
 		pushfd
