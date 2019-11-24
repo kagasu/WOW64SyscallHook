@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WOW64SyscallHook", "WOW64SyscallHook\WOW64SyscallHook.vcxproj", "{47EC131E-D80D-40BA-84F6-C9D5CADE970F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47EC131E-D80D-40BA-84F6-C9D5CADE970F}.Debug|x64.ActiveCfg = Debug|x64
+		{47EC131E-D80D-40BA-84F6-C9D5CADE970F}.Debug|x64.Build.0 = Debug|x64
+		{47EC131E-D80D-40BA-84F6-C9D5CADE970F}.Debug|x86.ActiveCfg = Debug|Win32
+		{47EC131E-D80D-40BA-84F6-C9D5CADE970F}.Debug|x86.Build.0 = Debug|Win32
+		{47EC131E-D80D-40BA-84F6-C9D5CADE970F}.Release|x64.ActiveCfg = Release|x64
+		{47EC131E-D80D-40BA-84F6-C9D5CADE970F}.Release|x64.Build.0 = Release|x64
+		{47EC131E-D80D-40BA-84F6-C9D5CADE970F}.Release|x86.ActiveCfg = Release|Win32
+		{47EC131E-D80D-40BA-84F6-C9D5CADE970F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50CF3065-65EB-4CA0-86C9-F8E868540EE5}
+	EndGlobalSection
+EndGlobal
