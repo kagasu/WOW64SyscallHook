@@ -32,8 +32,8 @@ void WriteWOW64SyscallHookCode(int* wow64Address, const int* newJumpAddress)
 
 void saveOriginalWOW64(const void* wow64Address)
 {
-	// FF 25 00000000        - jmp dword ptr [00000000]
-	auto size = 6;
+	// EA 00000000 3300      - jmp 0033:00000000
+	auto size = 7;
 	originalWOW64 = reinterpret_cast<int*>(VirtualAlloc(nullptr, size, MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE));
 	if (originalWOW64 != nullptr)
 	{
